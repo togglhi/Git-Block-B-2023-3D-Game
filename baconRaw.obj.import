@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dj0etcxup0tk8"
+path="res://.godot/imported/baconRaw.obj-b96de5a1d590ed3907fd2cc996696e4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/baconRaw.obj-b96de5a1d590ed3907fd2cc996696e4a.mesh"]
+
+source_file="res://baconRaw.obj"
+dest_files=["res://.godot/imported/baconRaw.obj-b96de5a1d590ed3907fd2cc996696e4a.mesh", "res://.godot/imported/baconRaw.obj-b96de5a1d590ed3907fd2cc996696e4a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

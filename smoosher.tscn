@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://35g5kibdt52b"]
+
+[ext_resource type="Script" path="res://smoosher.gd" id="1_ve0gw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdhkm"]
+albedo_color = Color(0.466667, 0.376471, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2xxq1"]
+material = SubResource("StandardMaterial3D_mdhkm")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vqdq"]
+
+[node name="smoosher" type="Area3D"]
+transform = Transform3D(2.51, 0, 0, 0, 5.841, 0, 0, 0, 2.51, 0, 0, 0)
+script = ExtResource("1_ve0gw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_2xxq1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2vqdq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

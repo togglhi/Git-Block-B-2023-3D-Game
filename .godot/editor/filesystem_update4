@@ -1,0 +1,11 @@
+res://level_1.tscn
+res://blocks.tres
+res://level_2.tscn
+res://player.tscn
+res://wallblocks.tscn
+res://goal.tscn
+res://fallzone.tscn
+res://coin.tscn
+res://hud.tscn
+res://smoosher.tscn
+res://startscreen.tscn

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xafcnhkucx8w"
+path="res://.godot/imported/candyBar.obj-3a3d1a8fa8d9f0bf9bde631c361cab1f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candyBar.obj-3a3d1a8fa8d9f0bf9bde631c361cab1f.mesh"]
+
+source_file="res://candyBar.obj"
+dest_files=["res://.godot/imported/candyBar.obj-3a3d1a8fa8d9f0bf9bde631c361cab1f.mesh", "res://.godot/imported/candyBar.obj-3a3d1a8fa8d9f0bf9bde631c361cab1f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

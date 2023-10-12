@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnjoy86mvix2p"]
+
+[ext_resource type="Script" path="res://CollisionShape3D.gd" id="1_gcwfm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fxtq5"]
+size = Vector3(60, 1, 60)
+
+[node name="fallzone" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fxtq5")
+script = ExtResource("1_gcwfm")
+
+[connection signal="body_entered" from="." to="CollisionShape3D" method="_on_fallzone_body_entered"]

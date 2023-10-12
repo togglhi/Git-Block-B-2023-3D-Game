@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://7my8fox8s6xa"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_qj7n3"]
+[ext_resource type="Texture2D" uid="uid://ccxetyih6jsk1" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Color.jpg" id="2_cd6n2"]
+[ext_resource type="Texture2D" uid="uid://dmikpyo6h2qxo" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Displacement.jpg" id="3_qbn6s"]
+[ext_resource type="Texture2D" uid="uid://ciqwjb1s3wulv" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_NormalGL.jpg" id="4_n8ofk"]
+[ext_resource type="Texture2D" uid="uid://dxn63n7bo6mjd" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Roughness.jpg" id="5_erd7n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upw4j"]
+albedo_texture = ExtResource("2_cd6n2")
+roughness_texture = ExtResource("5_erd7n")
+normal_enabled = true
+normal_texture = ExtResource("4_n8ofk")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_qbn6s")
+
+[sub_resource type="SphereMesh" id="SphereMesh_n5crn"]
+material = SubResource("StandardMaterial3D_upw4j")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_meecp"]
+
+[node name="player" type="CharacterBody3D"]
+rotation_edit_mode = 2
+script = ExtResource("1_qj7n3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_n5crn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_meecp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999852, 0.0172085, 0, -0.0172085, 0.999852, 0, 1.13487, 0.338261)
+current = true
+fov = 67.0595
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+light_energy = 1.5
+light_indirect_energy = 1.375
+light_volumetric_fog_energy = 1.25
+spot_range = 28.431
+spot_angle = 51.4553
