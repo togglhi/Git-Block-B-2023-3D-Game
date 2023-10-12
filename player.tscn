@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://7my8fox8s6xa"]
+[gd_scene load_steps=11 format=3 uid="uid://7my8fox8s6xa"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_qj7n3"]
 [ext_resource type="Texture2D" uid="uid://ccxetyih6jsk1" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Color.jpg" id="2_cd6n2"]
 [ext_resource type="Texture2D" uid="uid://dmikpyo6h2qxo" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Displacement.jpg" id="3_qbn6s"]
 [ext_resource type="Texture2D" uid="uid://ciqwjb1s3wulv" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_NormalGL.jpg" id="4_n8ofk"]
 [ext_resource type="Texture2D" uid="uid://dxn63n7bo6mjd" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Roughness.jpg" id="5_erd7n"]
+[ext_resource type="Texture2D" uid="uid://c886bm7ldp14u" path="res://5f446e604e05c.jpg" id="6_h1awf"]
+[ext_resource type="PackedScene" uid="uid://dmnvrve8h1e18" path="res://low_poly_flashlight/scene.gltf" id="7_0q5wd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upw4j"]
 albedo_texture = ExtResource("2_cd6n2")
@@ -30,13 +32,25 @@ mesh = SubResource("SphereMesh_n5crn")
 shape = SubResource("BoxShape3D_meecp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999852, 0.0172085, 0, -0.0172085, 0.999852, 0, 1.13487, 0.338261)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26954, 0.463411)
 current = true
 fov = 67.0595
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26011, 0)
 light_energy = 1.5
 light_indirect_energy = 1.375
 light_volumetric_fog_energy = 1.25
+light_projector = ExtResource("6_h1awf")
+shadow_enabled = true
 spot_range = 28.431
-spot_angle = 51.4553
+spot_angle = 33.2783
+
+[node name="flashlight" parent="." instance=ExtResource("7_0q5wd")]
+transform = Transform3D(0.00266821, 0.000232687, -0.0198199, -0.00173755, 0.0199244, -6.96731e-11, 0.0197449, 0.0017219, 0.00267834, 0.252581, 0.911803, 0.362422)
+
+[node name="flashlight extra light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.198646, 1.34426, 0.0766363)
+light_energy = 1.625
+light_specular = 1.56
+omni_range = 0.255

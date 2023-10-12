@@ -1,0 +1,11 @@
+Model Information:
+* title:	LOW POLY FLASHLIGHT
+* source:	https://sketchfab.com/3d-models/low-poly-flashlight-a63abc14a3be46e5b44bd671566b46bd
+* author:	Artitech Assets (https://sketchfab.com/Artitech.Assets)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "LOW POLY FLASHLIGHT" (https://sketchfab.com/3d-models/low-poly-flashlight-a63abc14a3be46e5b44bd671566b46bd) by Artitech Assets (https://sketchfab.com/Artitech.Assets) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

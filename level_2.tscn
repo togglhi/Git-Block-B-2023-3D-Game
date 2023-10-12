@@ -17,15 +17,19 @@ material = SubResource("StandardMaterial3D_e7jlu")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k62m0"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h7wr3"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sivop"]
 panorama = ExtResource("5_bybc2")
 
-[sub_resource type="Sky" id="Sky_54xh8"]
-sky_material = SubResource("PanoramaSkyMaterial_h7wr3")
+[sub_resource type="Sky" id="Sky_lu4p4"]
+sky_material = SubResource("PanoramaSkyMaterial_sivop")
 
-[sub_resource type="Environment" id="Environment_x28ab"]
+[sub_resource type="Environment" id="Environment_xqvlv"]
 background_mode = 2
-sky = SubResource("Sky_54xh8")
+background_energy_multiplier = 0.1
+sky = SubResource("Sky_lu4p4")
+fog_density = 0.2702
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1302
 
 [node name="level2" type="Node3D"]
 
@@ -44,9 +48,6 @@ fov = 28.125
 transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 0, 0)
 shape = SubResource("BoxShape3D_k62m0")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.680746, 0.732519, 0, -0.732519, 0.680746, 0, 38.4051, -0.350098)
-
 [node name="player" parent="." instance=ExtResource("1_2jaxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.35)
 
@@ -63,9 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2764, 3.83598, -15.3296)
 
 [node name="fallzone" parent="." instance=ExtResource("4_lg8rc")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -8.30783, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_x28ab")
 
 [node name="backgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tfhxg")
@@ -84,6 +82,9 @@ transform = Transform3D(7.71, 0, 0, 0, 7.71, 0, 0, 0, 7.71, -14.3383, 0.697773, 
 
 [node name="apple3" parent="." instance=ExtResource("8_nvmyp")]
 transform = Transform3D(7.71, 0, 0, 0, 7.71, 0, 0, 0, 7.71, 12.2465, 3.2547, 16.0082)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xqvlv")
 
 [connection signal="body_entered" from="apple" to="HUD" method="_on_apple_body_entered"]
 [connection signal="body_entered" from="apple2" to="HUD" method="_on_apple_body_entered"]
