@@ -35,7 +35,7 @@ offset_right = 10.0
 offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("2_771s8")
 theme_override_font_sizes/font_size = 100
-text = "Epic Marble Game"
+text = "Orb Adventure"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

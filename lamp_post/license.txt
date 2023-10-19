@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lamp post
+* source:	https://sketchfab.com/3d-models/lamp-post-ad522d71193d497d9599aa26551270f4
+* author:	OlegCoder (https://sketchfab.com/olegcoder)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lamp post" (https://sketchfab.com/3d-models/lamp-post-ad522d71193d497d9599aa26551270f4) by OlegCoder (https://sketchfab.com/olegcoder) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,63 @@
+[gd_scene load_steps=17 format=3 uid="uid://b7xisx0olrigv"]
+
+[ext_resource type="Texture2D" uid="uid://cwk1afuynjil0" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_Color.jpg" id="1_vcp2i"]
+[ext_resource type="Texture2D" uid="uid://vqunmila1cvu" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_AmbientOcclusion.jpg" id="2_tmtm7"]
+[ext_resource type="Texture2D" uid="uid://dfpggpv1s5h5o" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_Displacement.jpg" id="3_6ffak"]
+[ext_resource type="Texture2D" uid="uid://brc7y63sq2p16" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_NormalGL.jpg" id="4_48a7s"]
+[ext_resource type="Texture2D" uid="uid://f3tt6voe1rb6" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_Roughness.jpg" id="5_2jqro"]
+[ext_resource type="Texture2D" uid="uid://cp10qk6xoa6ih" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Color.png" id="6_bemko"]
+[ext_resource type="Texture2D" uid="uid://bm71jsdkfiipl" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_AmbientOcclusion.png" id="7_qgoxu"]
+[ext_resource type="Texture2D" uid="uid://7mlwm3clq8hy" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Displacement.png" id="8_gp5lf"]
+[ext_resource type="Texture2D" uid="uid://bu1rb1uwouk4c" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Metalness.png" id="9_tfwbc"]
+[ext_resource type="Texture2D" uid="uid://cgxu5hhw2gmv2" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_NormalGL.png" id="10_llhut"]
+[ext_resource type="Texture2D" uid="uid://b65wasdfjqpwb" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Roughness.png" id="11_6gpca"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_poue5"]
+albedo_texture = ExtResource("1_vcp2i")
+roughness_texture = ExtResource("5_2jqro")
+normal_enabled = true
+normal_texture = ExtResource("4_48a7s")
+ao_enabled = true
+ao_texture = ExtResource("2_tmtm7")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_6ffak")
+
+[sub_resource type="BoxMesh" id="BoxMesh_cthp4"]
+material = SubResource("StandardMaterial3D_poue5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ixsy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0i8e2"]
+albedo_texture = ExtResource("6_bemko")
+metallic = 1.0
+metallic_texture = ExtResource("9_tfwbc")
+roughness_texture = ExtResource("11_6gpca")
+normal_enabled = true
+normal_texture = ExtResource("10_llhut")
+ao_enabled = true
+ao_texture = ExtResource("7_qgoxu")
+heightmap_enabled = true
+heightmap_texture = ExtResource("8_gp5lf")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2j7f1"]
+material = SubResource("StandardMaterial3D_0i8e2")
+
+[node name="buildingblocks" type="Node3D"]
+
+[node name="stonewallblock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 2.27783)
+mesh = SubResource("BoxMesh_cthp4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stonewallblock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stonewallblock/StaticBody3D"]
+shape = SubResource("BoxShape3D_4ixsy")
+
+[node name="metalblock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.17793)
+mesh = SubResource("BoxMesh_2j7f1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="metalblock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="metalblock/StaticBody3D"]
+shape = SubResource("BoxShape3D_4ixsy")

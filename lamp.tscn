@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnpx31d3pl7gi"]
+
+[ext_resource type="PackedScene" uid="uid://ctipmpt8pwjxi" path="res://street_lamp/scene.gltf" id="1_xxvb7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sao15"]
+
+[node name="lamp" type="Node3D"]
+transform = Transform3D(4.51, 0, 0, 0, 4.51, 0, 0, 0, 4.51, 0, 0, -6.63617)
+
+[node name="scene" parent="." instance=ExtResource("1_xxvb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.563625, 0, 1.20498)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.0893102, 0, 0, 0, 1, 0, 0, 0, 0.0822343, -0.563802, 0.563463, 1.57718)
+shape = SubResource("BoxShape3D_sao15")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.564984, 0.724611, 1.9699)
+light_energy = 7.25
+light_indirect_energy = 0.75
+omni_range = 5.778

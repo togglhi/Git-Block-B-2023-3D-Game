@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv8bvtalaqmdo"]
+
+[ext_resource type="PackedScene" uid="uid://bjkcwnxsysvth" path="res://tree.glb" id="1_ba47x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wdrgc"]
+height = 2.76823
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+
+[node name="tree" parent="." instance=ExtResource("1_ba47x")]
+transform = Transform3D(1.56, 0, 0, 0, 1.56, 0, 0, 0, 1.56, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.80173, 0, 0, 0, 1, 0, -0.886119, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CapsuleShape3D_wdrgc")

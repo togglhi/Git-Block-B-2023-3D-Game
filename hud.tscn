@@ -1,23 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfwh80emqgoek"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_6dhp0"]
-[ext_resource type="FontFile" uid="uid://bqtf0wgoiqb62" path="res://SuperMario256.ttf" id="2_kilwl"]
+[ext_resource type="FontFile" uid="uid://db725bdwucq3e" path="res://the_macabre/The Macabre.otf" id="2_d2gef"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_6dhp0")
 
-[node name="coindisplay" type="Label" parent="."]
-offset_right = 271.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource("2_kilwl")
+[node name="bonusdisplay" type="Label" parent="."]
+offset_left = 4.0
+offset_right = 90.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("2_d2gef")
 theme_override_font_sizes/font_size = 48
+text = "bonus"
 
 [node name="timedisplay" type="Label" parent="."]
-offset_left = 837.0
-offset_top = 1.0
-offset_right = 1148.0
-offset_bottom = 98.0
-theme_override_fonts/font = ExtResource("2_kilwl")
+offset_left = 5.0
+offset_top = 170.0
+offset_right = 381.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("2_d2gef")
 theme_override_font_sizes/font_size = 48
 
 [node name="Timer" type="Timer" parent="."]

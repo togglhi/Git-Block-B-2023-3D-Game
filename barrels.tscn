@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://ip18bq3x0dy4"]
+
+[ext_resource type="PackedScene" uid="uid://cno46nwtektj7" path="res://stack_of_barrels/scene.gltf" id="1_vs4jp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1kh3u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r33d4"]
+size = Vector3(1.51915, 1, 1)
+
+[node name="barrels" type="StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.6, 0, 0, 0, 1.432, 0, 0, 0, 2.519, 0.0503859, 0.481103, -3.06051)
+shape = SubResource("CylinderShape3D_1kh3u")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.6, 0, 0, 0, 1.432, 0, 0, 0, 2.519, -2.94618, 0.481103, -3.06051)
+shape = SubResource("CylinderShape3D_1kh3u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.6, 0, 0, 0, 1.432, 0, 0, 0, 2.519, -6.00358, 0.481103, -3.06051)
+shape = SubResource("CylinderShape3D_1kh3u")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.6, 0, 0, 0, -6.25947e-08, 2.519, 0, -1.432, -1.10109e-07, -2.49303, 5.24447, 0.271186)
+shape = SubResource("CylinderShape3D_1kh3u")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.47925, 0, 0, 0, -1.22065e-07, 2.19804, 0, -2.79251, -9.60792e-08, -2.3755, 2.71561, 0.448178)
+shape = SubResource("BoxShape3D_r33d4")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+transform = Transform3D(5.5405, 0, 0, 0, -1.22065e-07, 2.19804, 0, -2.79251, -9.60792e-08, -2.3755, -0.0662021, 0.448178)
+shape = SubResource("BoxShape3D_r33d4")
+
+[node name="scene" parent="." instance=ExtResource("1_vs4jp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.599729, 0, 0.411235)

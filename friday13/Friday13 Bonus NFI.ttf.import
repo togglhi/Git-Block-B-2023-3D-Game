@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d3cauut4nu026"
+path="res://.godot/imported/Friday13 Bonus NFI.ttf-28d64bee4ff61139b324d53e712dbc1a.fontdata"
+
+[deps]
+
+source_file="res://friday13/Friday13 Bonus NFI.ttf"
+dest_files=["res://.godot/imported/Friday13 Bonus NFI.ttf-28d64bee4ff61139b324d53e712dbc1a.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

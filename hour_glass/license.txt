@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hour Glass
+* source:	https://sketchfab.com/3d-models/hour-glass-baafc6537f2c4b6696ff0829cc32f772
+* author:	FlukierJupiter (https://sketchfab.com/FlukierJupiter)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hour Glass" (https://sketchfab.com/3d-models/hour-glass-baafc6537f2c4b6696ff0829cc32f772) by FlukierJupiter (https://sketchfab.com/FlukierJupiter) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

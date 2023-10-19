@@ -38,7 +38,7 @@ fov = 67.0595
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26011, 0)
-light_energy = 1.5
+light_energy = 3.625
 light_indirect_energy = 1.375
 light_volumetric_fog_energy = 1.25
 light_projector = ExtResource("6_h1awf")

@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-var coins = 0
+var extentions = 0
 @export var timeleft = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$coindisplay.text = "coins: " + str(coins)
+	$bonusdisplay.text = "bonus: " + str(extentions)
 	$timedisplay.text = "time: " + str(timeleft)
 
 
@@ -14,9 +14,10 @@ func _process(delta):
 	pass
 
 
-func _on_apple_body_entered(body):
-	coins = coins + 1
-	$coindisplay.text = "coins: " + str(coins)
+func _on_hourglass_body_entered(body):
+	extentions = extentions + 1
+	timeleft +=5
+	$bonusdisplay.text = "bonus: " + str(extentions)
 
 
 func _on_timer_timeout():

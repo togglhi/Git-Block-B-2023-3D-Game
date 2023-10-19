@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=3 uid="uid://dvnw4w3d8d56o"]
+
+[ext_resource type="PackedScene" uid="uid://r3dyulvdf386" path="res://old_simple_ruin_barn_house_-_game_ready/scene.gltf" id="1_83ph2"]
+[ext_resource type="Texture2D" uid="uid://wdu1cf7fxcdf" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Color.jpg" id="2_i1hcj"]
+[ext_resource type="Texture2D" uid="uid://bi4a1l77equj7" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_AmbientOcclusion.jpg" id="3_ijsnu"]
+[ext_resource type="Texture2D" uid="uid://bc213xcf88g58" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Displacement.jpg" id="4_ma2pf"]
+[ext_resource type="Texture2D" uid="uid://cb0j6e1ednqcs" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Metalness.jpg" id="5_vfjcx"]
+[ext_resource type="Texture2D" uid="uid://hclixr15pn33" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_NormalGL.jpg" id="6_dab11"]
+[ext_resource type="Texture2D" uid="uid://dbn3tsj3km0yu" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Roughness.jpg" id="7_8g5rq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7j67"]
+size = Vector3(0.477255, 1, 1.13323)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut2tq"]
+albedo_texture = ExtResource("2_i1hcj")
+metallic = 1.0
+metallic_texture = ExtResource("5_vfjcx")
+roughness_texture = ExtResource("7_8g5rq")
+normal_enabled = true
+normal_texture = ExtResource("6_dab11")
+ao_enabled = true
+ao_texture = ExtResource("3_ijsnu")
+heightmap_texture = ExtResource("4_ma2pf")
+
+[sub_resource type="BoxMesh" id="BoxMesh_cm1jj"]
+material = SubResource("StandardMaterial3D_ut2tq")
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="scene" parent="." instance=ExtResource("1_83ph2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04231, 0, 1.48032)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5.10009, 0, 0, 0, 1.54598, 0, 0, 0, 1.5958, -1.05454, 0.677585, 1.38312)
+shape = SubResource("BoxShape3D_t7j67")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.644045, 0, 0, 0, 0.040159, -1.09027, 0.334409, 2.22567)
+mesh = SubResource("BoxMesh_cm1jj")

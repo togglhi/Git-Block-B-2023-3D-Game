@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmdb0kgaemk1w"
+path="res://.godot/imported/farmhouse_obj.obj-84d2c18171c595e7399d82a98edfd7a2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/farmhouse_obj.obj-84d2c18171c595e7399d82a98edfd7a2.mesh"]
+
+source_file="res://4vd2sk31doow-farmhouse_maya16/Farmhouse Maya 2016 Updated/farmhouse_obj.obj"
+dest_files=["res://.godot/imported/farmhouse_obj.obj-84d2c18171c595e7399d82a98edfd7a2.mesh", "res://.godot/imported/farmhouse_obj.obj-84d2c18171c595e7399d82a98edfd7a2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
