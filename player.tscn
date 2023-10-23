@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://7my8fox8s6xa"]
+[gd_scene load_steps=12 format=3 uid="uid://7my8fox8s6xa"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_qj7n3"]
 [ext_resource type="Texture2D" uid="uid://ccxetyih6jsk1" path="res://graphics/plasticTexture/Plastic016A_1K-JPG_Color.jpg" id="2_cd6n2"]
@@ -21,6 +21,9 @@ material = SubResource("StandardMaterial3D_upw4j")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_meecp"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2qbr"]
+size = Vector3(1, 0.657361, 1)
+
 [node name="player" type="CharacterBody3D"]
 rotation_edit_mode = 2
 script = ExtResource("1_qj7n3")
@@ -30,6 +33,10 @@ mesh = SubResource("SphereMesh_n5crn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_meecp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850402, 0)
+shape = SubResource("BoxShape3D_i2qbr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26954, 0.463411)

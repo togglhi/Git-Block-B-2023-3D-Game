@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch118rdbw5ork"]
 
 [ext_resource type="Script" path="res://startscreen.gd" id="1_wu1jq"]
-[ext_resource type="FontFile" uid="uid://bqtf0wgoiqb62" path="res://SuperMario256.ttf" id="2_771s8"]
 [ext_resource type="Texture2D" uid="uid://8wj1rvf13336" path="res://viktor-titov-10-may2015-forest-02.jpg" id="2_f3wbh"]
 [ext_resource type="FontFile" uid="uid://cep4jqvpwycvb" path="res://friday13/Friday13v12.ttf" id="3_31eha"]
+[ext_resource type="FontFile" uid="uid://bh8j8agfmlljc" path="res://curse_of_the_zombie/Curse of the Zombie.ttf" id="4_rximn"]
 
 [node name="startscreen" type="Control"]
 layout_mode = 3
@@ -42,12 +42,12 @@ text = "Find the Orb"
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 419.0
-offset_top = 439.0
-offset_right = 707.0
-offset_bottom = 599.0
+offset_top = 441.0
+offset_right = 761.0
+offset_bottom = 603.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.513726, 1, 0.482353, 1)
-theme_override_fonts/font = ExtResource("2_771s8")
+theme_override_fonts/font = ExtResource("4_rximn")
 theme_override_font_sizes/font_size = 80
 text = "START"
 flat = true
