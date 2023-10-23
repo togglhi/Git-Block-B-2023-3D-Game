@@ -5,6 +5,7 @@ const ROLLSPEED = deg_to_rad(8)
 const GRAVITY = 1.5
 const JUMPSPEED = 15
 const MOUSESENSITIVITY = 0.003
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -15,7 +16,9 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotation.y = rotation.y - event.relative.x * MOUSESENSITIVITY
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
+	
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	#gravity
@@ -48,7 +51,3 @@ func _process(delta):
 		velocity.x = 0
 	move_and_slide()
 	
-
-
-func _on_apple_body_entered(body):
-	pass # Replace with function body.

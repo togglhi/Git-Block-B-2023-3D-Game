@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch118rdbw5ork"]
+[gd_scene load_steps=5 format=3 uid="uid://ch118rdbw5ork"]
 
-[ext_resource type="Texture2D" uid="uid://b5nh5w8u7tqi4" path="res://graphics/Digital_Painting_equirectangular-jpg_low_poly_landscape_made_2123211489_8899230.jpg" id="1_v0ou0"]
 [ext_resource type="Script" path="res://startscreen.gd" id="1_wu1jq"]
 [ext_resource type="FontFile" uid="uid://bqtf0wgoiqb62" path="res://SuperMario256.ttf" id="2_771s8"]
+[ext_resource type="Texture2D" uid="uid://8wj1rvf13336" path="res://viktor-titov-10-may2015-forest-02.jpg" id="2_f3wbh"]
+[ext_resource type="FontFile" uid="uid://cep4jqvpwycvb" path="res://friday13/Friday13v12.ttf" id="3_31eha"]
 
 [node name="startscreen" type="Control"]
 layout_mode = 3
@@ -14,8 +15,9 @@ grow_vertical = 2
 script = ExtResource("1_wu1jq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(699, 439)
-texture = ExtResource("1_v0ou0")
+position = Vector2(1251.52, 671.453)
+scale = Vector2(1.40156, 1.54916)
+texture = ExtResource("2_f3wbh")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -29,13 +31,13 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 26.75
 anchor_bottom = 3.6
-offset_left = 10.0
-offset_top = 31.0
-offset_right = 10.0
-offset_bottom = 31.0
-theme_override_fonts/font = ExtResource("2_771s8")
+offset_left = 283.0
+offset_top = 16.0
+offset_right = 283.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_31eha")
 theme_override_font_sizes/font_size = 100
-text = "Orb Adventure"
+text = "Find the Orb"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgdoqxycib12u"]
+
+[ext_resource type="Script" path="res://lava.gd" id="1_yst87"]
+[ext_resource type="Texture2D" uid="uid://bkbwewtmglv26" path="res://Lava004_2K-JPG/Lava004_2K-JPG_Color.jpg" id="2_f4yu4"]
+[ext_resource type="Texture2D" uid="uid://cijo1mlb2n7yd" path="res://Lava004_2K-JPG/Lava004_2K-JPG_Emission.jpg" id="3_rlhkt"]
+[ext_resource type="Texture2D" uid="uid://dkh6oq5fg3qdd" path="res://Lava004_2K-JPG/Lava004_2K-JPG_Displacement.jpg" id="4_dr65t"]
+[ext_resource type="Texture2D" uid="uid://cyo5oi040n3nf" path="res://Lava004_2K-JPG/Lava004_2K-JPG_NormalGL.jpg" id="5_p1gi1"]
+[ext_resource type="Texture2D" uid="uid://ldplegoc2le4" path="res://Lava004_2K-JPG/Lava004_2K-JPG_Roughness.jpg" id="6_qnn66"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twt52"]
+albedo_texture = ExtResource("2_f4yu4")
+roughness_texture = ExtResource("6_qnn66")
+emission_enabled = true
+emission_texture = ExtResource("3_rlhkt")
+normal_enabled = true
+normal_texture = ExtResource("5_p1gi1")
+heightmap_enabled = true
+heightmap_texture = ExtResource("4_dr65t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mhvjq"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_twt52")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ixsy"]
+
+[node name="lava" type="Area3D"]
+transform = Transform3D(40, 0, 0, 0, 3.485, 0, 0, 0, 40, 0, 0, 0)
+script = ExtResource("1_yst87")
+
+[node name="LavaBlock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_mhvjq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_4ixsy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://7my8fox8s6xa" path="res://player.tscn" id="1_oyxjt"]
 [ext_resource type="PackedScene" uid="uid://cdyccptfhoin8" path="res://goal.tscn" id="3_6hb4a"]
+[ext_resource type="AudioStream" uid="uid://cq6k1rmhdy2mt" path="res://the_macabre/Kevin MacLeod - 8bit Dungeon Boss  NO COPYRIGHT 8-bit Music.mp3" id="4_8ml3a"]
 [ext_resource type="PackedScene" uid="uid://dnjoy86mvix2p" path="res://fallzone.tscn" id="4_euo1s"]
-[ext_resource type="AudioStream" uid="uid://dcqli8hea1rf" path="res://music_and_sounds/informative-pizzicato-by-steven-obrien-from-filmmusic-io.mp3" id="6_twoim"]
 [ext_resource type="PackedScene" uid="uid://ddao50i6efadb" path="res://hourglass.tscn" id="7_gun4m"]
 [ext_resource type="PackedScene" uid="uid://bfwh80emqgoek" path="res://hud.tscn" id="8_68lqr"]
 [ext_resource type="MeshLibrary" uid="uid://dojm4ahs8m12l" path="res://groundblocks.tres" id="8_332wu"]
@@ -27,18 +27,18 @@ sky = SubResource("Sky_qp1jt")
 ambient_light_source = 2
 ambient_light_color = Color(0.262745, 0.262745, 0.262745, 1)
 ambient_light_energy = 0.61
-fog_density = 0.2702
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_bloom = 0.18
+glow_blend_mode = 0
+fog_light_color = Color(0.231373, 0.231373, 0.231373, 1)
+fog_density = 0.1089
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0818
+volumetric_fog_density = 0.1872
+volumetric_fog_albedo = Color(0.109804, 0.109804, 0.109804, 1)
 
 [node name="level1" type="Node3D"]
-
-[node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 1)
-
-[node name="Camera3D" type="Camera3D" parent="floor"]
-transform = Transform3D(1, 0, 0, 0, 0.85865, 0.512562, 0, -0.512562, 0.85865, 0, 33.629, 54.643)
-fov = 28.125
 
 [node name="player" parent="." instance=ExtResource("1_oyxjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -54,8 +54,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -12.2224, 0)
 environment = SubResource("Environment_x81kf")
 
 [node name="backgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_twoim")
-volume_db = -6.686
+stream = ExtResource("4_8ml3a")
+volume_db = -20.311
 autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("8_68lqr")]
@@ -259,6 +259,10 @@ transform = Transform3D(7.71, 0, 0, 0, 7.71, 0, 0, 0, 7.71, 3.11841, 2.50881, -1
 
 [node name="hourglass4" parent="." instance=ExtResource("7_gun4m")]
 transform = Transform3D(7.71, 0, 0, 0, 7.71, 0, 0, 0, 7.71, -1.96554, 2.50881, 10.5819)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.85865, 0.512562, 0, -0.512562, 0.85865, 0, 33.129, 55.643)
+fov = 28.125
 
 [connection signal="body_entered" from="hourglass" to="HUD" method="_on_hourglass_body_entered"]
 [connection signal="body_entered" from="hourglass2" to="HUD" method="_on_hourglass_body_entered"]

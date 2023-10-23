@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr13vr71e05el"]
+
+[ext_resource type="PackedScene" uid="uid://buketgbi1138e" path="res://metal_wall_lamp/scene.gltf" id="1_xnf7t"]
+
+[node name="walllight" type="Node3D"]
+transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0, 0, 0)
+
+[node name="scene" parent="." instance=ExtResource("1_xnf7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.417844, 0, 1.9093)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(166.667, 0, 0, 0, 166.667, 0, 0, 0, 166.667, 32.6691, -32.9143, -127.78)
+light_color = Color(0.811765, 0.741176, 0.596078, 1)
+light_energy = 3.626
+omni_range = 5.336
