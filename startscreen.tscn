@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch118rdbw5ork"]
+[gd_scene load_steps=7 format=3 uid="uid://ch118rdbw5ork"]
 
 [ext_resource type="Script" path="res://startscreen.gd" id="1_wu1jq"]
 [ext_resource type="Texture2D" uid="uid://8wj1rvf13336" path="res://viktor-titov-10-may2015-forest-02.jpg" id="2_f3wbh"]
+[ext_resource type="Texture2D" uid="uid://31u8ge6whrkc" path="res://name-box.png" id="3_8qxxt"]
 [ext_resource type="FontFile" uid="uid://cep4jqvpwycvb" path="res://friday13/Friday13v12.ttf" id="3_31eha"]
+[ext_resource type="Texture2D" uid="uid://4q2dfq3nrxmd" path="res://pngtree-button-stone-png-image_4059135-PhotoRoom.png-PhotoRoom.png" id="4_e2avf"]
 [ext_resource type="FontFile" uid="uid://bh8j8agfmlljc" path="res://curse_of_the_zombie/Curse of the Zombie.ttf" id="4_rximn"]
 
 [node name="startscreen" type="Control"]
@@ -15,41 +17,59 @@ grow_vertical = 2
 script = ExtResource("1_wu1jq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1251.52, 671.453)
-scale = Vector2(1.40156, 1.54916)
+position = Vector2(587.721, 345.727)
+scale = Vector2(0.618685, 0.68384)
 texture = ExtResource("2_f3wbh")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 263.0
-offset_right = 1125.0
-offset_bottom = 389.0
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(596, 316)
+scale = Vector2(1.18155, 0.797627)
+texture = ExtResource("3_8qxxt")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(561, 438)
+scale = Vector2(2.01, 1.198)
+texture = ExtResource("4_e2avf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 366.0
+offset_right = 734.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.513726, 1, 0.482353, 1)
+theme_override_colors/font_hover_color = Color(0.662745, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_rximn")
+theme_override_font_sizes/font_size = 60
+text = "START"
+flat = true
+
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 26.75
 anchor_bottom = 3.6
-offset_left = 283.0
-offset_top = 16.0
-offset_right = 283.0
-offset_bottom = 16.0
+offset_left = 251.0
+offset_top = 155.0
+offset_right = 251.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.780392, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.341176, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_31eha")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 130
 text = "Find the Orb"
 
-[node name="Button" type="Button" parent="."]
+[node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 419.0
-offset_top = 441.0
-offset_right = 761.0
-offset_bottom = 603.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.513726, 1, 0.482353, 1)
-theme_override_fonts/font = ExtResource("4_rximn")
-theme_override_font_sizes/font_size = 80
-text = "START"
-flat = true
+offset_left = 239.0
+offset_top = 305.0
+offset_right = 900.0
+offset_bottom = 383.0
+theme_override_fonts/font = ExtResource("3_31eha")
+text = "You are an adventurer traveling through the dead of night. In each stage, your goal is to find the rare, magical orb. However, there is a fast time limit and some traps! Collect the hourglass items to increase your time by 5 seconds.
+"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

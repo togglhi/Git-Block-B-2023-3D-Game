@@ -15,9 +15,9 @@ res://lava.tscn
 res://lamp.tscn
 res://startscreen.tscn
 res://player.tscn
-res://deadscreen.gd
 res://level_3.tscn
 res://gravestone.tscn
 res://fence.tscn
 res://endscreen.tscn
-res://endscreen.gd
+res://hud.tscn
+res://coin.gd

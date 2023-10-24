@@ -1,28 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfwh80emqgoek"]
+[gd_scene load_steps=4 format=3 uid="uid://bfwh80emqgoek"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_6dhp0"]
 [ext_resource type="FontFile" uid="uid://db725bdwucq3e" path="res://the_macabre/The Macabre.otf" id="2_d2gef"]
+[ext_resource type="Texture2D" uid="uid://bv66tg0nktbhw" path="res://Untitled design (2)-PhotoRoom.png-PhotoRoom.png" id="2_l1ue6"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_6dhp0")
 
-[node name="bonusdisplay" type="Label" parent="."]
-offset_left = 4.0
-offset_right = 90.0
-offset_bottom = 59.0
-theme_override_fonts/font = ExtResource("2_d2gef")
-theme_override_font_sizes/font_size = 48
-text = "bonus"
-
-[node name="timedisplay" type="Label" parent="."]
-offset_left = 5.0
-offset_top = 170.0
-offset_right = 381.0
-offset_bottom = 239.0
-theme_override_fonts/font = ExtResource("2_d2gef")
-theme_override_font_sizes/font_size = 48
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(178, 40)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_l1ue6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(972, 38)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_l1ue6")
+
+[node name="timedisplay" type="Label" parent="."]
+offset_left = 904.0
+offset_top = 10.0
+offset_right = 1280.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_d2gef")
+theme_override_font_sizes/font_size = 55
+text = "Time"
+
+[node name="bonusdisplay" type="Label" parent="."]
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 355.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("2_d2gef")
+theme_override_font_sizes/font_size = 55
+text = "bonus"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

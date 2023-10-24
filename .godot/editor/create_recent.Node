@@ -1,3 +1,6 @@
+Label
+RichTextLabel
+Sprite2D
 Node3D
 CollisionShape3D
 StaticBody3D
@@ -14,8 +17,6 @@ Node2D
 SpotLight3D
 Button
 Panel
-Sprite2D
-Label
 Timer
 CanvasLayer
 AudioStreamPlayer

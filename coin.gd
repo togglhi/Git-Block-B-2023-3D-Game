@@ -13,6 +13,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	$coinsound.play()
+	$CollisionShape3D.queue_free()
 	$scene.queue_free()
 
 func _on_coinsound_finished():

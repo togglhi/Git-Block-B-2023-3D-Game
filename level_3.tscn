@@ -51,7 +51,7 @@ volume_db = -20.311
 autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("5_v2af1")]
-timeleft = 30
+timeleft = 50
 
 [node name="floormap" type="GridMap" parent="."]
 mesh_library = ExtResource("6_js5u3")
