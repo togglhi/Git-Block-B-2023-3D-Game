@@ -1,4 +1,4 @@
-res://player.tscn
+res://deadscreen.tscn
 res://groundblocks.tres
 res://buildingblocks.tres
 res://goal.tscn
@@ -14,7 +14,10 @@ res://walllight.tscn
 res://lava.tscn
 res://lamp.tscn
 res://startscreen.tscn
-res://deadscreen.tscn
-res://hud.gd
-res://lava.gd
+res://player.tscn
 res://deadscreen.gd
+res://level_3.tscn
+res://gravestone.tscn
+res://fence.tscn
+res://endscreen.tscn
+res://endscreen.gd

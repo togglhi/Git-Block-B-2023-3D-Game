@@ -15,6 +15,7 @@ shape = SubResource("BoxShape3D_jeqsc")
 transform = Transform3D(0.365, 0, 0, 0, 0.365, 0, 0, 0, 0.365, -0.0045985, 0, -0.0303894)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.521569, 1, 1, 1)
 light_energy = 1.25
 omni_range = 1.971
 

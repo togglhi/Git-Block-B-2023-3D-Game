@@ -16,13 +16,13 @@
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sivop"]
 
-[sub_resource type="Sky" id="Sky_lu4p4"]
+[sub_resource type="Sky" id="Sky_fhlfh"]
 sky_material = SubResource("PanoramaSkyMaterial_sivop")
 
 [sub_resource type="Environment" id="Environment_xqvlv"]
 background_mode = 2
 background_energy_multiplier = 0.23
-sky = SubResource("Sky_lu4p4")
+sky = SubResource("Sky_fhlfh")
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 glow_enabled = true
@@ -78,18 +78,12 @@ _data = {
 
 [node name="level2" type="Node3D"]
 
-[node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 1)
-
-[node name="Camera3D" type="Camera3D" parent="floor"]
-transform = Transform3D(1, 0, 0, 0, 0.85865, 0.512562, 0, -0.512562, 0.85865, 0, 33.629, 54.643)
-fov = 28.125
-
 [node name="player" parent="." instance=ExtResource("1_2jaxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66067, 18.4236)
 
 [node name="goal" parent="." instance=ExtResource("3_0nh4e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.290831, 12.8005, -15.3296)
+nextlevel = "res://level_3.tscn"
 
 [node name="fallzone" parent="." instance=ExtResource("4_lg8rc")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -8.30783, 0)
@@ -197,3 +191,7 @@ transform = Transform3D(40, 0, 0, 0, 3.485, 0, 0, 0, 40, 0, -7.43136, 0)
 transform = Transform3D(0.025, 0, 0, 0, 0.286944, 0, 0, 0, 0.025, 0, 0.368536, 0)
 stream = ExtResource("13_b1xcm")
 autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.85865, 0.512562, 0, -0.512562, 0.85865, 0, 33.129, 55.643)
+fov = 28.125

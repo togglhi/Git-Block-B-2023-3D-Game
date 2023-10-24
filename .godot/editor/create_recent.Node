@@ -1,14 +1,15 @@
+Node3D
+CollisionShape3D
+StaticBody3D
+GridMap
+WorldEnvironment
 CPUParticles3D
 AudioStreamPlayer3D
 DirectionalLight3D
 Area3D
 AnimationPlayer
-GridMap
-Node3D
 OmniLight3D
 MeshInstance3D
-CollisionShape3D
-StaticBody3D
 Node2D
 SpotLight3D
 Button
@@ -18,7 +19,6 @@ Label
 Timer
 CanvasLayer
 AudioStreamPlayer
-WorldEnvironment
 Camera3D
 CharacterBody3D
 RigidBody3D

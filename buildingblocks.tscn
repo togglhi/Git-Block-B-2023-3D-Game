@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7xisx0olrigv"]
+[gd_scene load_steps=25 format=3 uid="uid://b7xisx0olrigv"]
 
 [ext_resource type="Texture2D" uid="uid://cwk1afuynjil0" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_Color.jpg" id="1_vcp2i"]
 [ext_resource type="Texture2D" uid="uid://vqunmila1cvu" path="res://graphics/Tiles083_1K-JPG/Tiles083_1K-JPG_AmbientOcclusion.jpg" id="2_tmtm7"]
@@ -11,6 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://bu1rb1uwouk4c" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Metalness.png" id="9_tfwbc"]
 [ext_resource type="Texture2D" uid="uid://cgxu5hhw2gmv2" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_NormalGL.png" id="10_llhut"]
 [ext_resource type="Texture2D" uid="uid://b65wasdfjqpwb" path="res://DiamondPlate008C_1K-PNG/DiamondPlate008C_1K-PNG_Roughness.png" id="11_6gpca"]
+[ext_resource type="Texture2D" uid="uid://wdu1cf7fxcdf" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Color.jpg" id="12_bojvt"]
+[ext_resource type="Texture2D" uid="uid://bi4a1l77equj7" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_AmbientOcclusion.jpg" id="13_f6q2x"]
+[ext_resource type="Texture2D" uid="uid://bc213xcf88g58" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Displacement.jpg" id="14_swmus"]
+[ext_resource type="Texture2D" uid="uid://cb0j6e1ednqcs" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Metalness.jpg" id="15_blhd8"]
+[ext_resource type="Texture2D" uid="uid://hclixr15pn33" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_NormalGL.jpg" id="16_rafwp"]
+[ext_resource type="Texture2D" uid="uid://dbn3tsj3km0yu" path="res://graphics/Balltexture/DiamondPlate006C_1K-JPG_Roughness.jpg" id="17_7mm4c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_poue5"]
 albedo_texture = ExtResource("1_vcp2i")
@@ -42,6 +48,21 @@ heightmap_texture = ExtResource("8_gp5lf")
 [sub_resource type="BoxMesh" id="BoxMesh_2j7f1"]
 material = SubResource("StandardMaterial3D_0i8e2")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbhy0"]
+albedo_texture = ExtResource("12_bojvt")
+metallic = 1.0
+metallic_texture = ExtResource("15_blhd8")
+roughness_texture = ExtResource("17_7mm4c")
+normal_enabled = true
+normal_texture = ExtResource("16_rafwp")
+ao_enabled = true
+ao_texture = ExtResource("13_f6q2x")
+heightmap_enabled = true
+heightmap_texture = ExtResource("14_swmus")
+
+[sub_resource type="BoxMesh" id="BoxMesh_feky3"]
+material = SubResource("StandardMaterial3D_gbhy0")
+
 [node name="buildingblocks" type="Node3D"]
 
 [node name="stonewallblock" type="MeshInstance3D" parent="."]
@@ -60,4 +81,13 @@ mesh = SubResource("BoxMesh_2j7f1")
 [node name="StaticBody3D" type="StaticBody3D" parent="metalblock"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="metalblock/StaticBody3D"]
+shape = SubResource("BoxShape3D_4ixsy")
+
+[node name="orangeblock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2.18524)
+mesh = SubResource("BoxMesh_feky3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="orangeblock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="orangeblock/StaticBody3D"]
 shape = SubResource("BoxShape3D_4ixsy")

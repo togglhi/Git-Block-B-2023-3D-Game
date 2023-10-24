@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4ffyscnsej5m"]
+
+[ext_resource type="Texture2D" uid="uid://8wj1rvf13336" path="res://viktor-titov-10-may2015-forest-02.jpg" id="1_c2k6n"]
+[ext_resource type="Script" path="res://endscreen.gd" id="1_tw02n"]
+[ext_resource type="FontFile" uid="uid://cep4jqvpwycvb" path="res://friday13/Friday13v12.ttf" id="2_vl531"]
+
+[node name="endscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tw02n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1251.52, 671.453)
+scale = Vector2(1.40156, 1.54916)
+texture = ExtResource("1_c2k6n")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 263.0
+offset_right = 1125.0
+offset_bottom = 389.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 26.75
+anchor_bottom = 3.6
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("2_vl531")
+theme_override_font_sizes/font_size = 100
+text = "You found all the orbs!"
